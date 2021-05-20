@@ -42,19 +42,18 @@ header {
 header, nav {
     background-color: var(--plush-blue);
 }
-nav div {
+nav a {
+    display: block;
     background-color: var(--plush-orange);
     border-bottom: 2px solid black;
     padding: 10px;
-}
-nav div:first-child {
-    border-top: 2px solid black;
-}
-nav div a {
     text-decoration: none;
     color: whitesmoke;
 }
-nav div:hover {
+nav a:first-child {
+    border-top: 2px solid black;
+}
+nav a:hover {
     font-weight: bold;
     transition: font-weight 0.5s;
 }
@@ -66,7 +65,7 @@ i.icon:hover {
 }
 .under-construction {
     text-decoration: none;
-    font-weight: normal;
+    font-weight: normal !important;
 }
 
 :root {

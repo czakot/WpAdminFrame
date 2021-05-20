@@ -8,13 +8,16 @@
   left: 0;
   width: 100vw;
   height: 100vh;
+  /*
   background: var(--plush-row-hover);
   opacity: 0.6;
+  */
+  background: rgba(128,128,128,0.6);
   display: none;
 }
 #modaledit form {
   position: fixed;
-  background: white;
+  background:  beige;
   width: 50%;
   max-width: 500px;
   left: 50%;

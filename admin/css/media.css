@@ -25,19 +25,17 @@
   header {
     grid-area: 1 / 1 / 1 / 1;
   }
-  nav div {
+  nav a {
     background-color: var(--plush-orange);
     border: none;
     text-align: center;
-  }
-  nav div:first-child {
-    border: none;
-  }
-  nav div a {
     text-decoration: underline solid whitesmoke;
     color: whitesmoke;
   }
-  nav div:hover {
+  nav a:first-child {
+    border: none;
+  }
+  nav a:hover {
     font-weight: normal;
   }
   #logout-word {
