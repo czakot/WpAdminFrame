@@ -1,0 +1,41 @@
+@import "frame.css";
+
+#main {
+  display: grid;
+  grid-template: auto minmax(0,auto) minmax(0,1fr) / 1fr;
+  background-color: whitesmoke;
+  padding: 15px;
+}
+
+#main h3 {
+  border-bottom: 1px solid var(--plush-orange);
+}
+#main-list {
+  overflow-y: auto;
+}
+#list-header, .list-row {
+  display: grid;
+  grid-template-columns: 10% 1fr 6% 6% 30% 8%;
+  grid-column-gap: 10px;
+}
+#list-header {
+  border-bottom: 1px solid var(--plush-spinach);
+  padding: 5px;
+}
+.list-row {
+  border-bottom: 1px solid var(--plush-horizontal-separator);
+  padding: 5px 5px;
+}
+.list-row:nth-child(even) {
+  background-color: var(--plush-row-even);
+}
+.list-row:hover {
+  background-color: var(--plush-row-hover);
+  color: whitesmoke;
+}
+.narrow-list {
+  display: none;
+}
+.list-row span::after {
+  content: " ";
+}

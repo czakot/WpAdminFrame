@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-size: 12px;
+    word-wrap: anywhere;
+}
+#container {
+    height: 100%;
+    min-height: 100%;
+    background: beige;
+    display: grid;
+    grid-template: auto minmax(0,1fr) / 200px 1fr;
+}
+header {
+    grid-area: 1 / 1 / 1 / span 2;
+    display: grid;
+    grid-template: 1fr / auto 1fr auto auto auto auto;
+    grid-column-gap: 10px;
+    color: whitesmoke;
+    font-size: 120%;
+}
+header div {
+    padding: 1px;
+}
+#adminname {
+    font-weight: bold;
+}
+#logout {
+    background-color: var(--plush-orange);
+    border: 1px solid var(--plush-orange);
+    padding: 0;
+    border-radius: 7px;
+}
+header {
+    padding: 9px;
+}
+header, nav {
+    background-color: var(--plush-blue);
+}
+nav div {
+    background-color: var(--plush-orange);
+    border-bottom: 2px solid black;
+    padding: 10px;
+}
+nav div:first-child {
+    border-top: 2px solid black;
+}
+nav div a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+nav div:hover {
+    font-weight: bold;
+    transition: font-weight 0.5s;
+}
+i.icon:hover {
+    color: var(--plush-orange);
+}
+.control {
+    cursor: pointer;
+}
+.under-construction {
+    text-decoration: none;
+    font-weight: normal;
+}
+
+:root {
+
+    /* COLORS */
+    --plush-blue: #1f6991;
+    --plush-orange: #e95d0f;
+    --plush-spinach: #93a543;
+    --plush-horizontal-separator: #becd7f;
+    --plush-row-odd: #f5f5f5;
+    --plush-row-even: #e1e1e1;
+    --plush-row-hover: #495057;
+}
+

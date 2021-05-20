@@ -1,0 +1,33 @@
+.editicon {
+  text-decoration: none;
+  color: black;
+}
+#modaledit {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--plush-row-hover);
+  opacity: 0.6;
+  display: none;
+}
+#modaledit form {
+  position: fixed;
+  background: white;
+  width: 50%;
+  max-width: 500px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 15px;
+  line-height: 30px;
+}
+#modaledit form h3 {
+  text-align: center;
+}
+#modaledit:target {
+  display: block;
+}

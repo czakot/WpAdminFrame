@@ -1,0 +1,11 @@
+@import "frame.css";
+
+#main {
+  background-color: whitesmoke;
+  padding: 15px;
+  word-wrap: anywhere;
+}
+
+#main h3 {
+  border-bottom: 1px solid var(--plush-orange);
+}

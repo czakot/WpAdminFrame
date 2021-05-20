@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Lang" content="hu">
+<meta name="author" content="">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<title>HTML+CSS képzés - webáruház Adatmódosítás</title>
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/adatmodositas.js"></script>
+</head>
+<body>
+
+<div id="header">
+    <div class="logo">
+        <a href="fooldal.html">
+            <img src="images/php_pluss_logo.png" alt="Plüssjátékok webshop" title="Plüssjátékok webshop" />
+        </a>
+    </div>
+    <div class="nav">
+        <a href="javascript:;" class="mobilnav" onclick="show_menu()">
+            <img src="images/icon_mobilnav.png" alt="Menü" />
+        </a>
+        <ul class="navul">
+            <li>
+                <a href="fooldal.html">
+                    Főoldal
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" onclick="show_dropdown()">
+                    Plüssök &darr;
+                </a>
+                <ul class="dropdown_menu">
+                    <li>
+                        <a href="#">
+                            Kutyusok
+                        </a>    
+                    </li>
+                    <li>
+                        <a href="#">
+                            Cicák
+                        </a>    
+                    </li>
+                    <li>
+                        <a href="#">
+                            Macik
+                        </a>    
+                    </li>
+                    <li>
+                        <a href="#">
+                            Nyuszik
+                        </a>    
+                    </li>
+                    <li>
+                        <a href="#">
+                            Egyéb állatok
+                        </a>    
+                    </li>
+                    <li>
+                        <a href="#">
+                            Egyéb
+                        </a>    
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    Regisztráció
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Bejelentkezés
+                </a>
+            </li>
+            <li class="lastli">
+                <a href="#">
+                    Kapcsolat
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="basket">
+        <a class="basket_icon" href="#" title="Kosár">
+            <span class="hidetext">Kosár</span>
+        </a>
+    </div>
+</div>
+
+
+<div id="content_big">
+    <h1>Adatmódosítás</h1>
+    <p>A csillaggal jelölt mezők kitöltése kötelező</p>
+    
+    <form action="change_data.php">    
+        <h2>Elérhetőségi adatok</h2>
+        <div class="formtable">
+            <div class="formtext">
+                <label for="reg_email">E-mail cím*</label>
+            </div>
+            <div class="forminput">
+                <input type="email" name="reg_email" id="reg_email" required placeholder="nev@valami.hu">
+            </div>
+        </div>
+        <div class="formtable">
+            <div class="formtext">
+                <label for="buy_phone">Telefonszám*</label>
+            </div>
+            <div class="forminput">
+                <input type="text" name="buy_phone" id="buy_phone" required>
+            </div>
+        </div>
+        <div class="formtable">
+            <div class="formtext">
+                <label for="reg_fullname">Teljes név/Cégnév*</label>
+            </div>
+            <div class="forminput">
+                <input type="text" name="reg_fullname" id="reg_fullname" required>
+            </div>
+        </div>
+        <div class="formtable">
+            <div class="formtext">
+                <label for="reg_taxno">Cég esetén adószám</label>
+            </div>
+            <div class="forminput">
+                <input type="text" name="reg_taxno" id="reg_taxno" placeholder="12345678-1-41">
+            </div>
+        </div>
+		<div class="formtable">
+            <div class="formtext">
+                <label for="reg_taxno">Típus</label>
+            </div>
+            <div class="forminput">
+                <select name="tipus" id="tipus">
+					<option value="1">Magánszemély</option>
+					<option value="2">Cég</option>
+				</select>
+            </div>
+        </div>
+		<div class="formtable">
+            <div class="formtext">
+                <label for="newsletter">Kérek hírlevelet</label>
+            </div>
+            <div class="forminput">
+                <input type="checkbox" name="newsletter" id="newsletter">
+            </div>
+        </div>
+		<div class="formtable">
+            <div class="formtext">
+                Kedvenc plüss
+            </div>
+            <div class="forminput">
+                <input type="radio" name="favorite" id="bear"><label for="bear">Maci</label><br>
+                <input type="radio" name="favorite" id="rabbit"><label for="rabbit">Nyuszi</label>
+            </div>
+        </div>
+        <br>
+        <input type="submit" onclick="javascript: change_data();" id="modifydbtn" value="Módosítás">
+    </form>
+    
+    <form action="change_address.php">    
+        <h2>Címek</h2>
+        <h3>Szállítási cím</h3>
+        <div class="formtable">
+            <div class="formtext">
+                <label for="deliverypostcode">Irányítószám</label>
+            </div>
+            <div class="forminput">
+                <input type="text" name="deliverypostcode" id="deliverypostcode">
+            </div>
+        </div>
+        <div class="formtable">
+            <div class="formtext">
+                <label for="deliverycity">Település</label>
+            </div>
+            <div class="forminput">
+                <input type="text" name="deliverycity" id="deliverycity">
+            </div>
+        </div>
+        <div class="formtable">
+            <div class="formtext">
+                <label for="deliverystreet">Utca, házszám</label>
+            </div>
+            <div class="forminput">
+                <input type="text" name="deliverystreet" id="deliverystreet">
+            </div>
+        </div>
+        <p><a href="javascript: copy_address()">Szállítási cím másolása</a></p>
+        <h3>Számlázási cím</h3>
+        <div class="formtable">
+            <div class="formtext">
+                <label for="szlapostcode">Irányítószám*</label>
+            </div>
+            <div class="forminput">
+                <input type="text" name="szlapostcode" id="szlapostcode" required>
+            </div>
+        </div>
+        <div class="formtable">
+            <div class="formtext">
+                <label for="szlacity">Település*</label>
+            </div>
+            <div class="forminput">
+                <input type="text" name="szlacity" id="szlacity" required>
+            </div>
+        </div>
+        <div class="formtable">
+            <div class="formtext">
+                <label for="szlastreet">Közterület neve*</label>
+            </div>
+            <div class="forminput">
+                <input type="text" name="szlastreet" id="szlastreet" required>
+            </div>
+        </div>
+        <div class="formtable">
+            <div class="formtext">
+                <label for="szlastreettype">Közterlet jellege</label>
+            </div>
+            <div class="forminput">
+                <input type="text" name="szlastreettype" id="szlastreettype" placeholder="út, utca, sor, stb.">
+            </div>
+        </div>
+        <div class="formtable">
+            <div class="formtext">
+                <label for="szlahousenumber">Házszám</label>
+            </div>
+            <div class="forminput">
+                <input type="text" name="szlahousenumber" id="szlahousenumber">
+            </div>
+        </div>
+        <div class="formtable">
+            <div class="formtext">
+                <label for="szlaother">Emelet, ajtó, lépcsőház</label>
+            </div>
+            <div class="forminput">
+                <input type="text" name="szlaother" id="szlaother">
+            </div>
+        </div>
+        <br>
+        <input type="submit" id="addressmodeifydbtn" value="Módosítás">
+    </form>
+    
+    <form action="changePwd.php">    
+        <h2>Jelszóváltoztatás</h2>
+        <div class="formtable">
+            <div class="formtext">
+                <label for="modify_oldpwd">Régi jelszó*</label>
+            </div>
+            <div class="forminput">
+                <input type="password" name="modify_oldpwd" id="modify_oldpwd" required>
+            </div>
+        </div>
+        <div class="formtable">
+            <div class="formtext">
+                <label for="modify_newpwd">Új jelszó*</label>
+            </div>
+            <div class="forminput">
+                <input type="password" name="modify_newpwd" id="modify_newpwd" required placeholder="Legalább 8 karakter" pattern=".{8,}" title="Legalább 8 karakter">
+            </div>
+        </div>
+        <div class="formtable">
+            <div class="formtext">
+                <label for="modify_newpwd2">Új jelszó újra*</label>
+            </div>
+            <div class="forminput">
+                <input type="password" name="modify_newpwd2" id="modify_newpwd2" required>
+            </div>
+        </div>
+        <br>
+        <input type="submit" onclick="javascript: change_pwd();" id="pwdmodifydbtn" value="Módosítás">
+    </form>
+    
+    <form action="deleteUser.php">
+        <h2>Fiók törlése</h2>
+        <p>Felhívjuk figyelmét, hogy a felhasználói fiók törlése visszafordíthatatlan. Ezzel a művelettel törlődik a rendszerünkből minden személyes adata, így a vásárlási előzmények is. A törlés véglegesítéséhez egy megerősítő e-mail-t küldünk a regisztrált címére.</p>
+        <p>
+            <input type="checkbox" value="1" name="agree_delete" id="agree_delete" required> 
+            <label for="agree_delete">Megértettem a törlés feltételeit</label>
+        </p>
+        <br>
+        <input type="submit" onclick="javascript: delete_reg();" id="deletedbtn" value="Fiók törlése">
+    </form>
+</div>
+
+<div id="footer">
+    <div class="footer_table">
+        <div class="footer_td">
+            <p>
+                <a href="#">Kapcsolat</a>
+            </p>
+            <p>
+                +36-1-111-1111
+            </p>
+            <p>
+                <a href="mailto:info@plussok.hu">info@plussok.hu</a>
+            </p>
+            <p>
+                <a href="#">facebook.com/plussjatekok</a>
+            </p>
+            <p>
+                <a href="#">instagram.com/plussok</a>
+            </p>
+            <p>
+                <a href="#">YouTube</a>
+            </p>
+        </div>
+        <div class="footer_td">
+            <p>
+                <a href="#">ÁSZF</a>
+            </p>
+            <p>
+                <a href="#">Szállítási feltételek</a>
+            </p>
+            <p>
+                <a href="#">Adatvédelmi szabályzat</a>
+            </p>
+            <p>
+                <a href="#">Impresszum</a>
+            </p>
+        </div>
+        <div class="footer_td">
+            <p>
+                <a href="#">Regisztráció</a>
+            </p>
+            <p>
+                <a href="#">Bejelentkezés</a>
+            </p>
+            <p>
+                <a href="#">Profil</a>
+            </p>         
+        </div>
+    </div>
+</div>
+  
+</body>
+</html>
