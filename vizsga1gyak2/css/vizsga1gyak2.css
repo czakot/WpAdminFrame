@@ -1,0 +1,100 @@
+html, body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    background: lightblue;
+    /*padding: 20px;*/
+    border-bottom: #89428E 1px solid;
+}
+
+header ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin: 0;
+
+}
+
+header ul li {
+    padding: 10px;
+    /*padding-left: 50px;*/
+}
+
+header ul li a {
+    display: block;
+    padding: 10px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+header ul li a:hover {
+    background: rgb(153, 196, 210);
+    color: green;
+}
+
+main {
+    margin-top: 65px;
+    padding-top: 10px;
+}
+h1 {
+    text-align: center;
+}
+
+#summary, #order {
+    margin: 25px;
+}
+
+#sumtbl {
+    width: 520px;
+    /*background: darkgray;*/
+}
+
+#sumtbl:last-child {
+    border-bottom: darkgray solid 1px;
+}
+
+.sumrow {
+    display: grid;
+    grid-template-columns: 110px 150px 150px 30px;
+    column-gap: 20px;
+    align-items: center;
+    padding: 10px;
+    border: darkgray solid 1px;
+    border-bottom: none;
+}
+
+.sumrow:hover {
+    background: #edf7fc;
+}
+
+.sumrow i:hover {
+    color: red;
+}
+
+form {
+    border: darkgray solid 1px;
+    padding: 10px;
+    width: 700px;
+}
+
+form > div {
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 170px 500px;
+}
+
+form div select, #radio {
+    display: block;
+}

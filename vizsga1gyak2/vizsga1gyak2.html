@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS vizsga</title>
+    <link rel="stylesheet" type="text/css" href="css/vizsga1gyak2.css">
+	
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,600;1,100;1,300;1,600&display=swap" rel="stylesheet"> 
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+	<!--
+		betütípus, színek, padding, margin Rád van bízva, nem kell túl szépnek lennie a 100 ponthoz 
+		részpontokat is adni fogok nem csak teljes pontok szerezhetőek
+	-->
+</head>
+<body>
+	<header>
+		<nav>
+			<!--
+				Ide kérnék szépen felsorolásba (ul) egy egymás mellett levő menüsort az alábbi menükkel úgy, hogy az li-kben a-k legyen a kattintható elemek
+				Főoldal
+				Termékek
+				Kosár
+				Kapcsolat
+				
+				25 pont
+			-->
+			<ul>
+				<li>
+					<a href="#">Főoldal</a>
+				</li>
+				<li>
+					<a href="#">Termékek</a>
+				</li>
+				<li>
+					<a href="#">Kosár</a>
+				</li>
+				<li>
+					<a href="#">Kapcsolat</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main id="content">
+		<h1>Kosár</h1>
+		<div id="summary">
+			<h2>Összegzés</h2>
+			
+			<!--
+				Itt egymás alatt legyen 4 div, mindegyikben 3 cella (akár floatolva akár griddel megoldhatod)
+				Az első cellában legyen egy termék kép - képet találsz az images mappában
+				A másodikban egy darabszám
+				harmadikban egy összeg
+				negyedikben egy törlés icon (kuka icon: <em class="far fa-trash-alt" title="Törlés a kosárból"></em>)
+				
+				35 pont
+			!-->
+			<div id="sumtbl">
+				<div class="sumrow">
+					<div class="picture">
+						<img src="images/termek2.jpg" alt="maci" title="maci" width="70" height="70">
+					</div>
+					<div class="pieces">
+						10 darab
+					</div>
+					<div class="price">
+						6543 Ft
+					</div>
+					<div class="delete">
+						<a href="#">
+							<em class="far fa-trash-alt" title="Törlés a kosárból"></em>
+						</a>
+					</div>
+				</div>
+				<div class="sumrow">
+					<div class="picture">
+						<img src="images/termek2.jpg" alt="maci" title="maci" width="70" height="70">
+					</div>
+					<div class="pieces">
+						10 darab
+					</div>
+					<div class="price">
+						6543 Ft
+					</div>
+					<div class="delete">
+						<a href="#">
+							<em class="far fa-trash-alt" title="Törlés a kosárból"></em>
+						</a>
+					</div>
+				</div>
+				<div class="sumrow">
+					<div class="picture">
+						<img src="images/termek2.jpg" alt="maci" title="maci" width="70" height="70">
+					</div>
+					<div class="pieces">
+						10 darab
+					</div>
+					<div class="price">
+						6543 Ft
+					</div>
+					<div class="delete">
+						<a href="#">
+							<em class="far fa-trash-alt" title="Törlés a kosárból"></em>
+						</a>
+					</div>
+				</div>
+				<div class="sumrow">
+					<div class="picture">
+						<img src="images/termek2.jpg" alt="maci" title="maci" width="70" height="70">
+					</div>
+					<div class="pieces">
+						10 darab
+					</div>
+					<div class="price">
+						6543 Ft
+					</div>
+					<div class="delete">
+						<a href="#">
+							<em class="far fa-trash-alt" title="Törlés a kosárból"></em>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="order">
+			<h2>Rendelés leadása</h2>
+			<!--
+				Ide kérnék szépen egy űrlapot az alábbi mezőkkel:
+				- név - input text
+				- emailcím - input email
+				- fizetési mód - select
+				- szállítási mód - radio (2opcióval)
+				20pont
+				
+				JS-el ellenőrizd hogy a gomb megnyomásakor ki van-e töltve a név mező
+				20pont
+			-->
+			<form method="post" action="javascript: void(0)">
+				<div>
+					<label for="name">Név: </label>
+					<input type="text" name="name" id="name">
+				</div>
+				<div>
+					<label for="email">E-mail cím: </label>
+					<input type="email" name="email" id="email">
+				</div>
+				<div>
+					<label for="paymentmethod">Fizetési mód: </label>
+					<select name="paymentmethod" id="paymentmethod">
+						<option value="1">Készpénz</option>
+						<option value="2">Előreutalás</option>
+						<option value="3">Bankkártya</option>
+						<option value="4">Paypal</option>
+				</select>
+				</div>
+				<div>
+					<div>Szállítási mód:</div>
+					<div id="radio">
+						<input type="radio" name="deliverymethod" id="inperson">
+						<label for="inperson">Személyes átvétel</label>
+						<input type="radio" name="deliverymethod" id="parcelbox">
+						<label for="parcelbox">Csomagautomata</label>
+					</div>
+				</div>
+				<div>
+					<input type="submit" value="Megrendelés">
+				</div>
+			</form>
+		</div>
+	</main>
+	
+	
+	<script type="text/javascript" src="js/vizsga1gyak2.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

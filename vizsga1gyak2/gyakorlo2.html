@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS vizsga</title>
+    <link rel="stylesheet" type="text/css" href="css/vizsga.css">
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,600;1,100;1,300;1,600&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li>
+					<a href="#">Főoldal</a>
+				</li>
+				<li>
+					<a href="#">Termékek</a>
+				</li>
+				<li>
+					<a href="#">Kosár</a>
+				</li>
+				<li>
+					<a href="#">Kapcsolat</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main id="content">
+		<h1>Kosár</h1>
+		<div id="summary">
+			<h2>Összegzés</h2>
+			
+			<div class="summary_table">
+				<div>
+					<img src="images/termek2.jpg" alt="Szürke plüssmaci" title="Szürke plüssmaci">
+				</div>
+				<div>
+					1db
+				</div>
+				<div>
+					4800 Ft
+				</div>
+				<div>
+					<a href="#">
+						<i class="far fa-trash-alt" title="Törlés a kosárból"></i>
+					</a>
+				</div>
+			</div>
+			<div class="summary_table">
+				<div>
+					<img src="images/termek2.jpg" alt="Szürke plüssmaci" title="Szürke plüssmaci">
+				</div>
+				<div>
+					1db
+				</div>
+				<div>
+					4800 Ft
+				</div>
+				<div>
+					<a href="#">
+						<i class="far fa-trash-alt" title="Törlés a kosárból"></i>
+					</a>
+				</div>
+			</div>
+			<div class="summary_table">
+				<div>
+					<img src="images/termek2.jpg" alt="Szürke plüssmaci" title="Szürke plüssmaci">
+				</div>
+				<div>
+					1db
+				</div>
+				<div>
+					4800 Ft
+				</div>
+				<div>
+					<a href="#">
+						<i class="far fa-trash-alt" title="Törlés a kosárból"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div id="order">
+			<h2>Rendelés leadása</h2>
+			<form id="order-form" action="javascript:void(0);">
+				<label for="name">Név:</label>
+				<input type="text" id="name" name="name">
+				<label for="email">E-mail cím:</label>
+				<input type="email" id="email" name="email" placeholder="valami@valami.hu">
+				<label for="payment">Fizetési mód</label>
+				<select id="payment">
+					<option value="átutalás">Átutalás</option>
+					<option value="készpénz">Készpénz</option>
+				</select>
+				<div>Szállítási mód</div>
+				<div>
+					<input type="radio" id="szemelyes" name="delivery" value="szemelyes" checked>
+					<label for="szemelyes">Személyes átvétel</label><br>
+					<input type="radio" id="futar" name="delivery" value="futar">
+					<label for="futar">Futár</label>
+				</div>
+				
+				<input type="submit" value="Megrendelem" onclick="validateForm();">
+			</form>
+		</div>
+	</main>
+	
+	
+	<script type="text/javascript" src="js/vizsga.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
