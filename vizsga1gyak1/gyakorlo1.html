@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS gyakorló feladatsor 1</title>
+    <link rel="stylesheet" type="text/css" href="css/gyakorlo1.css">
+	
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li>
+					<a href="#">
+						<img src="images/logo2_150.png" alt="Cég logója" title="Cég logója">
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Rólunk
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Termékek
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Regisztráció
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Kapcsolat
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main id="content">
+		<h2>Regisztráció</h2>
+		<form id="regform" action="javascript: void(0);">
+			<label for="name">Név</label>
+			<input type="text" id="name" name="name">
+			<label for="email">E-mail cím</label>
+			<input type="email" id="email" name="email">
+			<label for="pwd">Jelszó</label>
+			<input type="password" id="pwd" name="pwd">
+			<label for="pwd2">Jelszó újra</label>
+			<input type="password" id="pwd2" name="pwd2">
+			<label for="address">Cím</label>
+			<input type="text" id="address" name="address">
+			<label for="invoice">ÁFÁ-számlát</label>
+			<select id="invoice" name="invoice">
+				<option value="yes">Kérek</option>
+				<option value="no">Nemkérek</option>
+			</select>
+			<div>Hírlevél</div>
+			<div>
+				<input type="checkbox" id="newletter" name="newletter">
+				<label for="newletter">Kérek hírlevelet</label>
+			</div>
+			<input type="submit" value="Regisztráció" onclick="javascript: regUser();">
+		</form>
+	</main>
+	
+	<footer>
+		<div id="footercontent">
+			Minden jog fenntartva
+			<a href="#">
+				ÁSZF
+			</a>
+			<a href="#">
+				Adatvédelmi
+			</a>
+		</div>
+	</footer>
+	
+	<script type="text/javascript" src="js/gyakorlo1.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
