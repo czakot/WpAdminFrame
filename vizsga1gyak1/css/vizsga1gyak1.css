@@ -1,0 +1,152 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    word-wrap: anywhere;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding: 20px;
+    border-bottom: #23bb13 1px solid;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    background: #edf7fc;
+}
+
+header ul {
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    list-style-type: none;
+}
+
+header nav {
+    padding: 0;
+    margin: 0;
+}
+
+header ul li {
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
+}
+
+header ul li a:hover {
+    color: #93a543;
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        height: auto;
+        position: static;
+    }
+    header, header ul {
+        display: block;
+    }
+    header ul {
+        padding: 0;
+    }
+    main {
+        margin-top: 0;
+    }
+}
+
+main {
+    margin-top: 100px;
+    margin-bottom: 80px;
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+form {
+    background: whitesmoke;
+    width: 75%;
+    margin: 0 auto 0 auto;
+    text-align: left;
+    border: 1px black solid;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+form div {
+    padding: 5px;
+}
+
+.fullwidth {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+}
+
+input, select {
+    max-width: 100%;
+    padding-left: 10px;
+}
+
+input[type='password'] {
+    width: 50%;
+}
+
+@media screen and (max-width: 600px) {
+    .fullwidth, label {
+        display: block;
+    }
+    input, select {
+        width: 100%;
+        max-width: 100%;
+        padding-right: 10px;
+    }
+    input[type='checkbox'] {
+        width: auto;
+    }
+    input[type='password'] {
+        width: 100%;
+    }
+    label {
+        max-width: 100%;
+    }
+}
+
+.shouldbefilled {
+
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    padding: 20px;
+    border-top: #23bb13 1px solid;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #edf7fc;
+}
+#leftfooter {
+    text-align: right;
+}
+
+@media screen and (max-width: 600px) {
+    footer {
+        display: block;
+        position: static;
+        height: auto;
+    }
+    #leftfooter {
+        text-align: unset;
+    }
+    main {
+        margin-bottom: 0;
+    }
+}
