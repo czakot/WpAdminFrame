@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="Woodpecker" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="Woodpecker">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/htmlvizsga" local="$PROJECT_DIR$/htmlvizsga" web="/htmlvizsga" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
