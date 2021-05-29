@@ -5,7 +5,7 @@
       <paths name="Woodpecker">
         <serverdata>
           <mappings>
-            <mapping deploy="/htmlvizsga" local="$PROJECT_DIR$/htmlvizsga" web="/htmlvizsga" />
+            <mapping deploy="/htmlvizsga/" local="$PROJECT_DIR$/htmlvizsga" web="/htmlvizsga/" />
           </mappings>
         </serverdata>
       </paths>

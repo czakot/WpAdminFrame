@@ -1,0 +1,177 @@
+	<!--
+	Vizsgakód: dtvGwZosS0$
+	betütípus, színek, padding, margin Rád van bízva, nem kell túl szépnek lennie a 100 ponthoz 
+	részpontok is szerezhetőek nem csak teljes pontszám
+	bootstrap használata tilos.
+-->
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS vizsga</title>
+    <link rel="stylesheet" type="text/css" href="css/vizsga.css">
+	<script type="text/javascript" src="js/vizsga.js"></script>
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+</head>
+<body>
+	<header>
+		<!--
+			A header legyen fixed
+				háttér színe legyen: #333333
+				Bal oldalra írd ki hogy "Adminisztráció"
+				Jobbra rendezve pedig legyen 3 icon
+					- Felhasználó
+					- Beállítások
+					- Kilépés
+					a fentiek legyen title-ben rárakva az iconokra
+					Használhatsz képet vagy font awesome elemet is pl:
+						- <i class="fas fa-user-circle"></i>
+						- <i class="fas fa-cog"></i>
+						- <i class="fas fa-sign-out-alt"></i>
+			
+			600px alatt static legyen 
+			
+			- 25pont
+		-->
+		<div id="headertitle">
+			<h2>Adminisztráció</h2>
+		</div>
+		<div id="headericons">
+			<ul>
+				<li></li>
+				<li>
+					<a href="#">
+						<i class="fas fa-user-circle" title="Felhasználó"></i>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="fas fa-cog" title="Beállítások"></i>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="fas fa-sign-out-alt" title="Kilépés"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<main>
+		<div id="new-product">
+			<h2>Új termék felvitele</h2>
+			<!--
+				A new-product és a product-list ID-val rendelkező div-ek legyenek egymás mellett, 300px legyen a new-product div.
+				Ide kérnék egy űrlapot az alábbi mezőkkel:
+					- termék neve (input - text)
+					- termék ára (input - number)
+					- kategória (select - értékek: Kutya, Nyúl, Ló)
+					- készlet (radio - értékek: Van készleten, Nincs készleten)
+					- mentés gomb
+				
+				600px alatt kerüljön egymás alá a két div és legyenek 100%-osak
+				
+				- 25pont
+				
+				Javascripttel ellenőrizd, hogy a gomb megnyomásakor ki van e töltve a termék neve input mező.
+					Ha üres a mező írja ki egy alert-el hogy töltse ki
+					Ha nem üres akkor írja ki, hogy rendben
+				- 25 pont
+			-->
+			<form id="new-product-form" action="javascript: void(0);" method="post">
+				<div>
+					<label for="productname">Termék neve</label>
+					<input type="text" id="productname">
+				</div>
+				<div>
+					<label for="productprice">Termék ára</label>
+					<input type="number" id="productprice">
+				</div>
+				<div>
+					<label for="productcategory">Kategória</label>
+					<select id="productcategory">
+						<option value="1">Kutya</option>
+						<option value="2">Nyúl</option>
+						<option value="3">Ló</option>
+					</select>
+				</div>
+				<div>
+					<input type="radio" name="available" id="instock">
+					<label for="instock">Van készleten</label>
+					<br>
+					<input type="radio" name="available" id="outofstock">
+					<label for="outofstock">Nincs készleten</label>
+				</div>
+				<div>
+					<label for="submitbutton"></label>
+					<input type="submit" id="submitbutton" onclick="javascript: validate();" value="Mentés">
+				</div>
+			</form>
+		</div>
+		<div id="product-list">
+			<h2>Termékek</h2>
+			<!--
+				Ide kérnék szépen egy táblázatot (akár grid, akár float, akár table-el megoldhatod)
+				3 oszlop legyen:
+					- név
+					- ár
+					- művelet
+				Legyen legalább 2 sora a táblázatnak és egy fejléce
+				A művelet oszlopba rakj két icont (használhatsz képet vagy icont pl: <i class="fas fa-trash-alt"></i>  <i class="fas fa-pencil-alt"></i>)
+				
+				- 25 pont
+			-->
+			<div id="table">
+				<div id="tableheader">
+					<div>Név</div>
+					<div>Ár</div>
+					<div>Művelet</div>
+				</div>
+				<div>
+					<div>Kutya</div>
+					<div>20000 Ft</div>
+					<div>
+						<a href="#" title="edit"><i class="fas fa-pencil-alt"></i></a>
+						<a href="#" title="delete"><i class="fas fa-trash-alt"></i></a>
+					</div>
+				</div>
+				<div>
+					<div>Nyúl</div>
+					<div>5000 Ft</div>
+					<div>
+						<a href="#" title="edit"><i class="fas fa-pencil-alt"></i></a>
+						<a href="#" title="delete"><i class="fas fa-trash-alt"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

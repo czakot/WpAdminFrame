@@ -1,0 +1,108 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  border-bottom: yellow 3px solid;
+  background-color: #333333;
+  color: yellow;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  padding-left: 40px;
+  padding-right: 40px;
+
+}
+
+header h2 {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#headericons {
+  float: right;
+}
+
+header ul {
+  display: grid;
+  grid-template-columns: 1fr repeat(3,auto);
+  column-gap: 20px;
+  list-style-type: none;
+}
+
+header ul li {
+  display: inline;
+}
+
+header ul li a {
+  color: yellow;
+}
+header ul li a:hover {
+  color: orangered;
+}
+
+main {
+  margin-top: 80px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  column-gap: 40px;
+}
+
+main div h2 {
+  text-align: center;
+}
+
+#new-product form {
+  border: black 1px solid;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#new-product form input, #new-product form select {
+  width: 100%;
+}
+
+#new-product form input[type='radio'] {
+  width: auto;
+}
+
+#table {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 30px;
+}
+
+#table div {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+
+#table div div a i:hover {
+  color: orangered;
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    position: static;
+    display: block;
+    max-width: 100%;
+  }
+  main {
+    display: block;
+  }
+  #new-product, #product-list {
+    width: 100%;
+  }
+}
